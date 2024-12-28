@@ -9,7 +9,6 @@ a {
 }
 body {
     font-family: "Lato", sans-serif;
-
 }
 .center {
     padding-left: calc(50% - 400px);
@@ -37,15 +36,12 @@ body {
     padding-left: calc(50% - $widthSite / 2);
     padding-right: calc(50% - $widthSite / 2);
     color: #636363;
-    //width: $widthSite;
     background-color: #f8f3f4;
     padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    //color: $colorText;
-    //height: 142px;
     &_head {
         font-size: 24px;
         font-weight: 400;
@@ -53,182 +49,74 @@ body {
         //text-align: left;
         text-decoration-skip-ink: none;
         color: $colorText;
+        transition: transform 3s ease, box-shadow 3s ease;
         }
-    &_bredcrumbs{
-        &_link{
-            font-style: normal;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 16.8px;
-            color: #636363;
+    &_head:hover {
+        color: #5b71e0;
+        transform: translateY(-1px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        background-color: #dfe6e9;
         }
-        &_site {
-            color: $colorText;
-            font-weight: 700px;
-        }    
-    }
-    &_body { // это вложение меня смутило, получается отсюда скаладывается только название класса, а то что sample и sample_body пришли из разных div неважно, но всё работает)))
-        display: flex;
-        align-items: center; 
-        justify-content:space-between ; 
-        height: 100vh;
-        gap: $widthSite/3 ;
-    }
 }
 
-.description {
-    display: grid;
-    justify-items: center;
-    &_wc {
-        color: #EF5B70;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 16.8px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        padding-bottom: 12px;
-    }
-    &_slogan {
-        padding-top: 12px;
-        padding-bottom: 48px;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 21.6px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        }
-    &_content {
-        width: 655px;
-        display: grid;
-        text-align: center;
-        padding-bottom: 32px;
-       }
-    &_price-container {
-        color: $colorText;
-        width: 56px;
-        height: 29.25px;
-        top: 1198.21px;
-        left: 761.16px;
-        gap: 0px;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 28.8px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        padding-bottom: 64px;
-    }
-    &_bredcrumbs{
-        padding-top: 64px;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        padding-bottom: 64px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16.8px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        color: #6F6E6E;
-        &_one  {
-            display: flex;
-            gap: 10px;
-        }
-        &_to {
-            display: flex;
-            gap: 10px;
-        }
-        &_free {
-            display: flex;
-            gap: 10px;
-        }
-    }
-    &_card {
-    width: 200px;
-    height: 40px;
+.container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    border:1px solid #F16D7F;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.2px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color:#F26376;
-    }
+    justify-content:flex-start; 
+    gap: 40px; 
+    padding-left: 230px;
+    padding-right: 230px;
+    padding-top: 96px;
+    padding-bottom: 0px;
 }
 
-.filter-sum {
-    padding-left: 60px;
-    padding-right: 100px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-}
-summary {
-    display: block;
-    padding-left: 60px;
-}
-summary::-webkit-details-marker {
-    display: none;
-}
-
-.filter {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.8px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: $colorText;
-}
- 
-.menu {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.8px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: $colorText;
-    
-    &_content {
+.block {
+    text-align: center; 
+    &_img { 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
         display: flex;
-        padding-left: 60px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16.8px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        color: #6F6E6E;
+        width: 600px; 
+        height: 306px;
+        &_fotomen {
+            height: 100%;
+            }
+        &_part1 {
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            }
         }
-}
- .sort {
-    gap: 1px;
-    display: flex;
- }
-.top3 {
-    display: grid;
-    justify-content: center;
-    padding-top: 48px;
-    grid-template-columns: repeat(3, 363px); 
-    gap: 10px;
-    &_block4 {
-        &_text {
-            &_1 {
-                padding-top: 20px;
+    &_adress {
+        padding: 10px;
+        width: 360px; /* Задает ширину блока 30% */
+        height: 272px;
+        text-align: left;
+        &_ship {
+            margin: 15px 0;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            }
+        &_city {    
+            margin: 15px 0;
+            border: 1px solid #A4A4A4;
+            font-family: Lato;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 15.6px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            &_bang {
+                gap: 100px;
+                font-family: Lato;
                 font-size: 13px;
                 font-weight: 400;
                 line-height: 15.6px;
@@ -236,31 +124,133 @@ summary::-webkit-details-marker {
                 text-underline-position: from-font;
                 text-decoration-skip-ink: none;
             }
-            &_2 {
-                padding-top: 10px;
-                font-size: 14px;
-                color: #5D5D5D;
-                font-weight: 300;
-                line-height: 16.8px;
-                text-align: left;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-            }
-             &_3 {
-                padding-top: 20px;
-                color: $colorText;
-                font-weight: lighter;
-            }
+        }
+        &_post {
+            font-family: Lato;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 13.2px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            text-decoration-color: rgba(74, 74, 74, 1);
+
+            width: 30%;
+            border: 1px solid #A4A4A4
         }
     }
+    &_price {
+        width: 360px; 
+        height: 214px;
+        background: rgba(245, 243, 243, 1);
+        display: grid;
+        justify-content: center;
+        &_sub {
+            padding-top: 36px;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 13.2px;
+            text-align: right;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        &_grand {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: right;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        
+        &_procesed {
+            padding-top: 20px;
+            border: 1px solid #A4A4A4;
+            display: flex;
+            width: 273px;
+            height: 50px;
+            justify-content: center;
+            background-color: red;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: rgba(255, 255, 255, 1);
+        }
+        &_procesed:hover {
+            background-color: #5b71e0;
+        }
+    }
+    &_end {
+        width: 600px; 
+        height: 50px;
+        display: flex; 
+        justify-content: space-between; 
+        
+        &_clear {
+            width: 30%;
+            border: 1px solid #A4A4A4;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &_continue {
+            width: 30%;
+            border: 1px solid #A4A4A4;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+       
+        }
+    }
+    
 }
+.krest {
+    width: 20px;
+    height: 20px;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+.text {
+    padding-left: 10px;
+    padding-bottom: 50px;
+    width: 300px;
+    text-align: left;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 
+    &_price {
+        display: flex; 
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26.4px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        &_300 {
+        color: $colorText;
+        margin-left: 5px;
+    }
+    }
+   
+}
 .foot {    
     padding-top: 95px;
     padding: 20px;
     &_2 {
         width: 1598px;
-        height: 448px;
+        height: 350px;
         background-image: url('img/photo_subscribe.svg');
         width: 100%; /* Занимает всю ширину родителя */
         background-size: cover;
@@ -283,12 +273,47 @@ summary::-webkit-details-marker {
             justify-content: center;
             font-size: 20px;
             text-align: center;
+            &_replika {
+                font-family: Lato;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+            }
+            &_replika2 {
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+            }
         }
         &_2 {
             display: flex;
             flex-direction: column;
             align-items: center;
             font-size: 24px;
+            &_text1 {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28.8px;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+            }
+            &_text2 {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 21.6px;
+                text-align: center;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+            }
             &_subscribe-container {
                 display: flex;
                 align-items: center;
