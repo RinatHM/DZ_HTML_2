@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список без точек с галочками</title>
+    <style>
+        .custom-list {
+            list-style-type: none; /* Убираем стандартные маркеры списка */
+            padding: 0;           /* Убираем отступы */
+            margin: 0;            /* Убираем внешние отступы */
+        }
+
+        .custom-list li {
+            position: relative;  /* Устанавливаем позиционирование для :before */
+            padding-left: 20px; /* Увеличиваем отступ слева для галочки */
+        }
+
+        .custom-list li::before {
+            content: '✔'; /* Код символа для галочки */
+            position: absolute; 
+            left: 0;        /* Устанавливаем позицию галочки */
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="custom-list">
+        <li>Первый элемент списка</li>
+        <li>Второй элемент списка</li>
+        <li>Третий элемент списка</li>
+    </ul>
+
+</body>
+</html>
