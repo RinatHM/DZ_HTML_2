@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.header {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.header__left, .header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__left {
+  padding-left: 20%;
+}
+
+.header__right {
+  padding-right: 20%;
+}
+
+.header img {
+  height: 30px;
+  width: auto;
+  transition: opacity 0.3s;
+}
+
+.header img:hover {
+  opacity: 0.7;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #F16D7F;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  .header__left {
+    padding-left: 32px;
+  }
+  .header__right {
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__right a:not(:first-child) {
+    display: none;
+  }
+  
+  .header__left, .header__right {
+    padding: 0 16px;
+  }
+}

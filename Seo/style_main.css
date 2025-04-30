@@ -91,7 +91,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
 }
-
+a {
+  display: flex;
+}
 .top_body4 {
   display: flex;
   justify-content: center;
